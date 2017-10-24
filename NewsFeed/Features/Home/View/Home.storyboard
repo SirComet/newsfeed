@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UBh-XT-N6A">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home Table View Controller-->
+        <scene sceneID="QxS-Gi-FOd">
+            <objects>
+                <tableViewController storyboardIdentifier="HomeTableViewController" id="UBh-XT-N6A" customClass="HomeTableViewController" customModule="newsfeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="P8c-80-PD0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeItemViewCell" rowHeight="220" id="IQa-Zs-pSO" customClass="HomeItemViewCell" customModule="newsfeed" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="220"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IQa-Zs-pSO" id="fAh-HM-vpY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LbJ-yW-xfb">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzc-Ti-3VA">
+                                            <rect key="frame" x="15" y="187.5" width="345" height="17"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Fzc-Ti-3VA" firstAttribute="leading" secondItem="fAh-HM-vpY" secondAttribute="leading" constant="15" id="15F-3b-Vm3"/>
+                                        <constraint firstItem="LbJ-yW-xfb" firstAttribute="leading" secondItem="fAh-HM-vpY" secondAttribute="leading" id="DTP-oK-D4v"/>
+                                        <constraint firstItem="LbJ-yW-xfb" firstAttribute="top" secondItem="fAh-HM-vpY" secondAttribute="top" id="Lds-wu-FEU"/>
+                                        <constraint firstAttribute="bottom" secondItem="Fzc-Ti-3VA" secondAttribute="bottom" constant="15" id="jVH-hW-lxC"/>
+                                        <constraint firstAttribute="trailing" secondItem="LbJ-yW-xfb" secondAttribute="trailing" id="lOx-1x-e8D"/>
+                                        <constraint firstAttribute="bottom" secondItem="LbJ-yW-xfb" secondAttribute="bottom" id="rng-95-Bre"/>
+                                        <constraint firstAttribute="trailing" secondItem="Fzc-Ti-3VA" secondAttribute="trailing" constant="15" id="wdz-R6-vyK"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UBh-XT-N6A" id="pt0-1a-ji7"/>
+                            <outlet property="delegate" destination="UBh-XT-N6A" id="RoR-Fk-MSU"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZK-wf-E6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-103" y="113"/>
+        </scene>
+    </scenes>
+</document>
