@@ -21,9 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		self.window = UIWindow(frame: UIScreen.main.bounds)
 		self.prepareWindowRootViewController()
 		
-        #if DEBUG
+#if DEBUG
         print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last ?? "");
-        #endif
+#endif
         
 		return true
 	}

@@ -35,7 +35,7 @@ extension HomePresenter {
             self.view.reloadTableView()
             self.view.hideLoading()
         }, fail: { error in
-            self.view.showAlert(withTitle: "", message: "", buttonTitle: "OK")
+            self.view.showAlert(withTitle: "", message: error.message!, buttonTitle: "OK")
             self.view.hideLoading()
         })
     }
@@ -50,7 +50,7 @@ extension HomePresenter {
         
         switch item.type {
         case .article: self.router.readArticle(with: item)
-        case .video: break
+        case .video: self.router.showVideo(with: item)
         }
     }
 }

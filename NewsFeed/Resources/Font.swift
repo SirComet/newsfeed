@@ -19,7 +19,7 @@ enum Font {
         switch self {
         case .regular: return "HelveticaNeue"
         case .medium: return "HelveticaNeue-Medium"
-        case .bold: return "HeleveticaNeue-Bold"
+        case .bold: return "HelveticaNeue-Bold"
         case .condensedBold: return "HelveticaNeue-CondensedBold"
         }
     }

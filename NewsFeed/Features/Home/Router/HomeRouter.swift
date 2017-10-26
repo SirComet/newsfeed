@@ -24,4 +24,10 @@ final class HomeRouter {
         let navigation = (UIApplication.shared.delegate as? AppDelegate)?.navigation?.presenter
         navigation?.go(to: .Article, with: item)
     }
+	
+	func showVideo(with item: FeedHighlight) {
+		
+		let navigation = (UIApplication.shared.delegate as? AppDelegate)?.navigation?.presenter
+		navigation?.go(to: .Video, with: item)
+	}
 }

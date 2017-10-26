@@ -33,7 +33,8 @@ extension NavigationPresenter {
 		case .Article:
             ArticleRouter().show(at: view, with: item as! FeedHighlight)
             
-		case .Video: break
+		case .Video:
+			VideoRouter().show(at: view, with: item as! FeedHighlight)
 		}
 	}
 }

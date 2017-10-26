@@ -18,7 +18,11 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupLayout()
-        self.presenter?.loadHighlights()
+		
+		guard let presenter = presenter else {
+			fatalError("Presenter cannot be nil")
+		}
+        presenter.loadHighlights()
 
         // Preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

@@ -70,7 +70,7 @@ extension ArticleTableViewController {
         self.title = "NewsFeed"
         self.view.backgroundColor = .black
         
-        self.tableView.estimatedRowHeight = 305
+        self.tableView.estimatedRowHeight = 310
         self.tableView.rowHeight = UITableViewAutomaticDimension
     }
 }
