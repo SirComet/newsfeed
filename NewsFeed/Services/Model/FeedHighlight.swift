@@ -14,14 +14,16 @@ struct FeedHighlight {
     var thumb_url: String
     var share_url: String
     var headline: String
+    var body: String
     var category: String
     var type: FeedType
     
-    init(id: Int, thumb_url: String, share_url: String, headline: String, category: String, type: FeedType) {
+    init(id: Int, thumb_url: String, share_url: String, headline: String, body: String, category: String, type: FeedType) {
         self.id = id
         self.thumb_url = thumb_url
         self.share_url = share_url
         self.headline = headline
+        self.body = body
         self.category = category
         self.type = type
     }
@@ -41,6 +43,7 @@ extension FeedHighlight {
             let thumb_url = item["thumb_url"].stringValue
             let share_url = item["share_url"].stringValue
             let headline = item["headline"].stringValue
+            let body = item["body"].stringValue
             let category = item["category"].stringValue
             let type = FeedType(rawValue: item["type"].stringValue)!
             
@@ -48,6 +51,7 @@ extension FeedHighlight {
                                             thumb_url: thumb_url,
                                             share_url: share_url,
                                             headline: headline,
+                                            body: body,
                                             category: category,
                                             type: type))
         }

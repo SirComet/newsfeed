@@ -11,20 +11,36 @@ import SVProgressHUD
 
 class ArticleTableViewController: UITableViewController {
     
-    @IBOutlet fileprivate weak var photoImageView: UIImageView!
-    @IBOutlet fileprivate weak var headlineLabel: UILabel!
-    @IBOutlet fileprivate weak var bodyTextLabel: UILabel!
-    
     var presenter: ArticlePresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupLayout()
-        self.fillOutlets()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+}
+
+// MARK: - Table view data source
+
+extension ArticleTableViewController {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let presenter = presenter else {
+            fatalError("Presenter cannot be nil")
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: ArticleItemViewCell.identifier, for: indexPath) as! ArticleItemViewCell
+        cell.fillOutlets(with: presenter.viewItem)
+        
+        return cell
     }
 }
 
@@ -54,24 +70,7 @@ extension ArticleTableViewController {
         self.title = "NewsFeed"
         self.view.backgroundColor = .black
         
-        self.tableView.estimatedRowHeight = 80
+        self.tableView.estimatedRowHeight = 305
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        
-        self.headlineLabel.textColor = .white
-        self.bodyTextLabel.textColor = .white
-    }
-    
-    fileprivate func fillOutlets() {
-        
-        guard let presenter = presenter else {
-            fatalError("Presenter cannot be nil")
-        }
-        
-        self.headlineLabel.text = presenter.viewItem.headline
-        self.bodyTextLabel.text = presenter.viewItem.headline
-        
-        ImageCache.get(url: presenter.viewItem.thumb_url, success: { image in
-            self.photoImageView.image = image
-        })
     }
 }
