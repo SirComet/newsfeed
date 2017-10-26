@@ -45,13 +45,13 @@
                                             <size key="shadowOffset" width="1" height="1"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATEGORY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvR-C4-5f5">
-                                            <rect key="frame" x="15" y="168.5" width="50.5" height="14.5"/>
+                                            <rect key="frame" x="15" y="167.5" width="54.5" height="15.5"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="12"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="13"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRq-GJ-ekX">
+                                        <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRq-GJ-ekX">
                                             <rect key="frame" x="335" y="15" width="25" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="LWG-EZ-Gc9"/>
@@ -61,7 +61,7 @@
                                             <state key="normal" image="iconFavorite"/>
                                             <state key="selected" image="iconFavoriteFill"/>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhU-i4-9M7">
+                                        <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhU-i4-9M7">
                                             <rect key="frame" x="335" y="45" width="25" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="24" id="fcj-GZ-1hN"/>
@@ -90,7 +90,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="categoryLabel" destination="zvR-C4-5f5" id="0hN-wk-UIC"/>
-                                    <outlet property="favotireButton" destination="tRq-GJ-ekX" id="Yp8-LR-WpX"/>
+                                    <outlet property="favoriteButton" destination="tRq-GJ-ekX" id="wAA-py-zXN"/>
                                     <outlet property="headlineLabel" destination="Fzc-Ti-3VA" id="wrm-78-ZF9"/>
                                     <outlet property="shareButton" destination="OhU-i4-9M7" id="2E9-24-RR5"/>
                                     <outlet property="thumbImage" destination="LbJ-yW-xfb" id="SYf-Jk-VNI"/>

@@ -20,7 +20,7 @@ class HomeTableViewController: UITableViewController {
         self.setupLayout()
         self.presenter?.loadHighlights()
 
-        // Uncomment the following line to preserve selection between presentations
+        // Preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
     }
 
@@ -57,8 +57,13 @@ extension HomeTableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: HomeItemViewCell.identifier, for: indexPath) as! HomeItemViewCell
         cell.fillOutlets(with: presenter.viewItems[indexPath.row])
+        
         cell.shareButton.addTarget(self, action: #selector(shareHighlight(_:)), for: .touchUpInside)
         cell.shareButton.tag = indexPath.row
+        
+        cell.favoriteButton.addTarget(self, action: #selector(saveFavorite(_:)), for: .touchUpInside)
+        cell.favoriteButton.tag = indexPath.row
+        
 		return cell
     }
 }
@@ -84,6 +89,11 @@ extension HomeTableViewController: HomeViewProtocol {
         UIView.transition(with: self.tableView, duration: 0.35, options: .transitionCrossDissolve, animations: { self.tableView.reloadData() })
     }
     
+    func reloadRow(at index: Int) {
+        let indexPath = IndexPath(item: index, section: 0)
+        self.tableView.reloadRows(at: [indexPath], with: .none)
+    }
+    
 	func showAlert(withTitle title: String, message: String, buttonTitle: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: buttonTitle, style: .default, handler: nil))
@@ -91,7 +101,7 @@ extension HomeTableViewController: HomeViewProtocol {
 	}
 }
 
-// MARK: - Actions
+// MARK: - Buttons actions
 
 extension HomeTableViewController {
     
@@ -106,6 +116,14 @@ extension HomeTableViewController {
             activity.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.addToReadingList, UIActivityType.openInIBooks]
             self.present(activity, animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func saveFavorite(_ sender: UIButton) {
+        
+        guard let presenter = presenter else {
+            fatalError("Presenter cannot be nil")
+        }
+        presenter.saveFavorite(index: sender.tag)
     }
 }
 

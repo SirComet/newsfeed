@@ -35,6 +35,7 @@
 		8D79D2FC1FA145C200FD2AD4 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D79D2FB1FA145C200FD2AD4 /* FeedService.swift */; };
 		8D79D2FE1FA145FD00FD2AD4 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D79D2FD1FA145FD00FD2AD4 /* AppConstants.swift */; };
 		8D79D3001FA1597900FD2AD4 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D79D2FF1FA1597900FD2AD4 /* ImageCache.swift */; };
+		8D79D3031FA1742300FD2AD4 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D79D3021FA1742300FD2AD4 /* DefaultsManager.swift */; };
 		8D7F26C81FA13D22009C5D3E /* RequestHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7F26C71FA13D22009C5D3E /* RequestHTTPMethod.swift */; };
 		E64D1266596A18CF803D3360 /* Pods_newsfeedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9AC44E81DF4385D13A21C17 /* Pods_newsfeedTests.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 		8D79D2FB1FA145C200FD2AD4 /* FeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
 		8D79D2FD1FA145FD00FD2AD4 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		8D79D2FF1FA1597900FD2AD4 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		8D79D3021FA1742300FD2AD4 /* DefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
 		8D7F26C71FA13D22009C5D3E /* RequestHTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHTTPMethod.swift; sourceTree = "<group>"; };
 		9CA2808D7141A606CD070617 /* Pods-newsfeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newsfeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-newsfeed/Pods-newsfeed.debug.xcconfig"; sourceTree = "<group>"; };
 		9F78F43DB5E20D1672ED393D /* Pods-newsfeedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newsfeedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-newsfeedTests/Pods-newsfeedTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		421130FE1F9F71E00034607F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8D79D3011FA1740000FD2AD4 /* DefaultsManager */,
 				421131001F9F71F00034607F /* ServiceHelper */,
 				421130FF1F9F71E70034607F /* Extensions */,
 				8D79D2FF1FA1597900FD2AD4 /* ImageCache.swift */,
@@ -235,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				421131511F9FB4A50034607F /* Router */,
-				421131371F9F75820034607F /* Model */,
 				421131361F9F757C0034607F /* View */,
 				421131351F9F75770034607F /* Presenter */,
 			);
@@ -259,13 +261,6 @@
 				4211313D1F9F9F790034607F /* HomeItemViewCell.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		421131371F9F75820034607F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		421131401F9FA4DC0034607F /* Navigation */ = {
@@ -316,6 +311,14 @@
 				8D79D2F91FA143B900FD2AD4 /* FeedHighlight.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8D79D3011FA1740000FD2AD4 /* DefaultsManager */ = {
+			isa = PBXGroup;
+			children = (
+				8D79D3021FA1742300FD2AD4 /* DefaultsManager.swift */,
+			);
+			path = DefaultsManager;
 			sourceTree = "<group>";
 		};
 		EE24CCF7940D088EC4849FCC /* Pods */ = {
@@ -575,6 +578,7 @@
 				8D79D2FC1FA145C200FD2AD4 /* FeedService.swift in Sources */,
 				8D7F26C81FA13D22009C5D3E /* RequestHTTPMethod.swift in Sources */,
 				421131501F9FB28B0034607F /* HomeViewProtocol.swift in Sources */,
+				8D79D3031FA1742300FD2AD4 /* DefaultsManager.swift in Sources */,
 				4211314E1F9FB27B0034607F /* HomePresenter.swift in Sources */,
 				421131541F9FB4BC0034607F /* HomeRouter.swift in Sources */,
 			);

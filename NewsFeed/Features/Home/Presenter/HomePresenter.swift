@@ -39,6 +39,11 @@ extension HomePresenter {
             self.view.hideLoading()
         })
     }
+    
+    func saveFavorite(index: Int) {
+        DefaultsManager.saveFavoriteNews(id: viewItems[index].id)
+        self.view.reloadRow(at: index)
+    }
 }
 
 // MARK: - Private methods

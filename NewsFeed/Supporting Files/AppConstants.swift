@@ -9,10 +9,12 @@
 enum AppConstants {
     
     case serviceHost
+    case favoriteKey
     
     var value: String {
         switch self {
         case .serviceHost: return "https://private-2414c-newsfeed8.apiary-mock.com/"
+        case .favoriteKey: return "favorites"
         }
     }
 }

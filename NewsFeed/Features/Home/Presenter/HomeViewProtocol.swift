@@ -13,5 +13,6 @@ protocol HomeViewProtocol: class {
 	func showLoading(message: String)
 	func hideLoading()
     func reloadTableView()
+    func reloadRow(at index: Int)
 	func showAlert(withTitle title: String, message: String, buttonTitle: String)
 }

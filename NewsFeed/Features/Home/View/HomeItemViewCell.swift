@@ -13,7 +13,7 @@ class HomeItemViewCell: UITableViewCell {
     @IBOutlet fileprivate weak var headlineLabel: UILabel!
     @IBOutlet fileprivate weak var categoryLabel: UILabel!
     @IBOutlet fileprivate weak var thumbImage: UIImageView!
-    @IBOutlet fileprivate(set) weak var favotireButton: UIButton!
+    @IBOutlet fileprivate(set) weak var favoriteButton: UIButton!
     @IBOutlet fileprivate(set) weak var shareButton: UIButton!
 
     override func awakeFromNib() {
@@ -25,12 +25,13 @@ class HomeItemViewCell: UITableViewCell {
         
         setBadgeCategory(category: highlight.category)
         setImage(url: highlight.thumb_url)
+        setFavorite(id: highlight.id)
     }
     
     fileprivate func setImage(url: String) {
         ImageCache.get(url: url, success: { image in
             self.thumbImage.image = image
-            self.thumbImage.alpha = 0.5
+            self.thumbImage.alpha = 0.45
         })
     }
     
@@ -38,7 +39,7 @@ class HomeItemViewCell: UITableViewCell {
         
         self.categoryLabel.text = " \(category.uppercased()) "
         
-        // UGLY!!!
+        // FIXME: VERY UGLY!!
         if category.uppercased().contains("NFL") {
             self.categoryLabel.backgroundColor = Color.categoryNFL.value
         }
@@ -50,6 +51,17 @@ class HomeItemViewCell: UITableViewCell {
         }
         else if category.uppercased().contains("UFC") {
             self.categoryLabel.backgroundColor = Color.categoryUFC.value
+        }
+    }
+    
+    fileprivate func setFavorite(id: Int) {
+        
+        if DefaultsManager.isFavorite(id: id) {
+            self.favoriteButton.setImage(#imageLiteral(resourceName: "iconFavoriteFill"), for: .normal)
+            self.favoriteButton.tintColor = .white
+        } else {
+            self.favoriteButton.setImage(#imageLiteral(resourceName: "iconFavorite"), for: .normal)
+            self.favoriteButton.tintColor = .white
         }
     }
 }
