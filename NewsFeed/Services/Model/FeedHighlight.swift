@@ -15,9 +15,9 @@ struct FeedHighlight {
     var share_url: String
     var headline: String
     var category: String
-    var type: String
+    var type: FeedType
     
-    init(id: Int, thumb_url: String, share_url: String, headline: String, category: String, type: String) {
+    init(id: Int, thumb_url: String, share_url: String, headline: String, category: String, type: FeedType) {
         self.id = id
         self.thumb_url = thumb_url
         self.share_url = share_url
@@ -42,7 +42,7 @@ extension FeedHighlight {
             let share_url = item["share_url"].stringValue
             let headline = item["headline"].stringValue
             let category = item["category"].stringValue
-            let type = item["type"].stringValue
+            let type = FeedType(rawValue: item["type"].stringValue)!
             
             highlights.append(FeedHighlight(id: id,
                                             thumb_url: thumb_url,

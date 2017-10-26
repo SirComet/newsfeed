@@ -18,4 +18,10 @@ final class HomeRouter {
 		
 		navigation.show(controller, sender: nil)
 	}
+    
+    func readArticle(with item: FeedHighlight) {
+        
+        let navigation = (UIApplication.shared.delegate as? AppDelegate)?.navigation?.presenter
+        navigation?.go(to: .Article, with: item)
+    }
 }

@@ -29,8 +29,11 @@ extension NavigationPresenter {
 			HomeRouter().show(at: view)
 			
 		case .Favorites: break
-		case .ArticleDetail: break
-		case .VideoDetail: break
+            
+		case .Article:
+            ArticleRouter().show(at: view, with: item as! FeedHighlight)
+            
+		case .Video: break
 		}
 	}
 }

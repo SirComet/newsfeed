@@ -66,6 +66,14 @@ extension HomeTableViewController {
         
 		return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let presenter = presenter else {
+            fatalError("Presenter cannot be nil")
+        }
+        presenter.selectViewItem(at: indexPath.row)
+    }
 }
 
 // MARK: - Protocol

@@ -44,6 +44,15 @@ extension HomePresenter {
         DefaultsManager.saveFavoriteNews(id: viewItems[index].id)
         self.view.reloadRow(at: index)
     }
+    
+    func selectViewItem(at index: Int) {
+        let item = viewItems[index]
+        
+        switch item.type {
+        case .article: self.router.readArticle(with: item)
+        case .video: break
+        }
+    }
 }
 
 // MARK: - Private methods

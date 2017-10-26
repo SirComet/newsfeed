@@ -13,8 +13,8 @@ enum AppRoute: String {
 	
 	case Home
 	case Favorites
-	case ArticleDetail
-	case VideoDetail
+	case Article
+	case Video
 	
 	var instance: UIStoryboard {
 		return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
