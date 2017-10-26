@@ -12,6 +12,9 @@
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue-Bold</string>
         </array>
+        <array key="HelveticaNeueExtras.ttc">
+            <string>HelveticaNeue-CondensedBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Home Table View Controller-->
@@ -31,26 +34,67 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LbJ-yW-xfb">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                                            <rect key="frame" x="0.0" y="1" width="375" height="219"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzc-Ti-3VA">
-                                            <rect key="frame" x="15" y="187.5" width="345" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzc-Ti-3VA">
+                                            <rect key="frame" x="15" y="187" width="345" height="18"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <size key="shadowOffset" width="1" height="1"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATEGORY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvR-C4-5f5">
+                                            <rect key="frame" x="15" y="168.5" width="50.5" height="14.5"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="12"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRq-GJ-ekX">
+                                            <rect key="frame" x="335" y="15" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="LWG-EZ-Gc9"/>
+                                                <constraint firstAttribute="width" constant="25" id="uyw-yo-Yab"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="iconFavorite"/>
+                                            <state key="selected" image="iconFavoriteFill"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhU-i4-9M7">
+                                            <rect key="frame" x="335" y="45" width="25" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="fcj-GZ-1hN"/>
+                                                <constraint firstAttribute="width" constant="25" id="tgr-FT-I4a"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="iconShare"/>
+                                        </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="tRq-GJ-ekX" secondAttribute="trailing" constant="15" id="062-Rv-SpO"/>
                                         <constraint firstItem="Fzc-Ti-3VA" firstAttribute="leading" secondItem="fAh-HM-vpY" secondAttribute="leading" constant="15" id="15F-3b-Vm3"/>
+                                        <constraint firstAttribute="bottom" secondItem="Fzc-Ti-3VA" secondAttribute="bottom" constant="15" id="2cr-ci-XxV"/>
                                         <constraint firstItem="LbJ-yW-xfb" firstAttribute="leading" secondItem="fAh-HM-vpY" secondAttribute="leading" id="DTP-oK-D4v"/>
-                                        <constraint firstItem="LbJ-yW-xfb" firstAttribute="top" secondItem="fAh-HM-vpY" secondAttribute="top" id="Lds-wu-FEU"/>
-                                        <constraint firstAttribute="bottom" secondItem="Fzc-Ti-3VA" secondAttribute="bottom" constant="15" id="jVH-hW-lxC"/>
+                                        <constraint firstItem="tRq-GJ-ekX" firstAttribute="top" secondItem="fAh-HM-vpY" secondAttribute="top" constant="15" id="LHO-JM-cXR"/>
+                                        <constraint firstItem="LbJ-yW-xfb" firstAttribute="top" secondItem="fAh-HM-vpY" secondAttribute="top" constant="1" id="Lds-wu-FEU"/>
+                                        <constraint firstItem="tRq-GJ-ekX" firstAttribute="trailing" secondItem="OhU-i4-9M7" secondAttribute="trailing" id="Wd5-wS-ybb"/>
+                                        <constraint firstItem="Fzc-Ti-3VA" firstAttribute="leading" secondItem="zvR-C4-5f5" secondAttribute="leading" id="eLf-yv-fcx"/>
                                         <constraint firstAttribute="trailing" secondItem="LbJ-yW-xfb" secondAttribute="trailing" id="lOx-1x-e8D"/>
+                                        <constraint firstItem="Fzc-Ti-3VA" firstAttribute="top" secondItem="zvR-C4-5f5" secondAttribute="bottom" constant="4" id="lUV-P2-RFB"/>
                                         <constraint firstAttribute="bottom" secondItem="LbJ-yW-xfb" secondAttribute="bottom" id="rng-95-Bre"/>
                                         <constraint firstAttribute="trailing" secondItem="Fzc-Ti-3VA" secondAttribute="trailing" constant="15" id="wdz-R6-vyK"/>
+                                        <constraint firstItem="OhU-i4-9M7" firstAttribute="top" secondItem="tRq-GJ-ekX" secondAttribute="bottom" constant="5" id="xk3-7J-WZb"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="categoryLabel" destination="zvR-C4-5f5" id="0hN-wk-UIC"/>
+                                    <outlet property="favotireButton" destination="tRq-GJ-ekX" id="Yp8-LR-WpX"/>
+                                    <outlet property="headlineLabel" destination="Fzc-Ti-3VA" id="wrm-78-ZF9"/>
+                                    <outlet property="shareButton" destination="OhU-i4-9M7" id="2E9-24-RR5"/>
+                                    <outlet property="thumbImage" destination="LbJ-yW-xfb" id="SYf-Jk-VNI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -64,4 +108,9 @@
             <point key="canvasLocation" x="-103" y="113"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iconFavorite" width="32" height="32"/>
+        <image name="iconFavoriteFill" width="32" height="32"/>
+        <image name="iconShare" width="32" height="32"/>
+    </resources>
 </document>

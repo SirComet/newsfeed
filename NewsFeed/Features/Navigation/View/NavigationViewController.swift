@@ -24,6 +24,9 @@ extension NavigationViewController {
 	
 	fileprivate func setupLayout() {
 		
+        self.navigationBar.tintColor = .white
+        self.navigationBar.barTintColor = Color.main.value
+        self.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: Font.condensedBold.name, size: 18) ?? UIFont.boldSystemFont(ofSize: 18),
+                                                  NSForegroundColorAttributeName: UIColor.white]
 	}
-	
 }

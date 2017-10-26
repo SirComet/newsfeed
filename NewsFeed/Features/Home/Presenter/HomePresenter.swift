@@ -12,10 +12,14 @@ final class HomePresenter {
 	
 	fileprivate unowned var view: HomeViewProtocol
 	fileprivate var router: HomeRouter
+    fileprivate var service: FeedService
+    
+    fileprivate(set) var viewItems: [FeedHighlight] = []
 	
 	init(view: HomeViewProtocol, router: HomeRouter) {
 		self.view = view
 		self.router = router
+        self.service = FeedService()
 	}
 }
 
@@ -23,6 +27,18 @@ final class HomePresenter {
 
 extension HomePresenter {
 	
+    func loadHighlights() {
+        
+        self.view.showLoading(message: "Carregando...")
+        self.service.getHighlights(success: { highlights in
+            self.viewItems.append(contentsOf: highlights)
+            self.view.reloadTableView()
+            self.view.hideLoading()
+        }, fail: { error in
+            self.view.showAlert(withTitle: "", message: "", buttonTitle: "OK")
+            self.view.hideLoading()
+        })
+    }
 }
 
 // MARK: - Private methods

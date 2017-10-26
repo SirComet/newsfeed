@@ -10,6 +10,8 @@ inhibit_all_warnings!
 # Libraries
 def available_pods
   pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'SVProgressHUD'
 end 
 
 target 'newsfeed' do
