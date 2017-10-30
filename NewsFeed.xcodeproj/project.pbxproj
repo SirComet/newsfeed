@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42052ECC1FA79FBD00DC48F5 /* TouchActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42052ECB1FA79FBD00DC48F5 /* TouchActions.swift */; };
 		421130EF1F9F68890034607F /* newsfeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421130EE1F9F68890034607F /* newsfeedTests.swift */; };
 		421131041F9F73060034607F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421131021F9F73060034607F /* AppDelegate.swift */; };
 		421131071F9F73210034607F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 421131061F9F73210034607F /* Assets.xcassets */; };
@@ -68,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		0FAB11E9167435B982293955 /* Pods_newsfeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_newsfeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42052ECB1FA79FBD00DC48F5 /* TouchActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchActions.swift; sourceTree = "<group>"; };
 		421130D61F9F68890034607F /* newsfeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newsfeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		421130EA1F9F68890034607F /* newsfeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = newsfeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		421130EE1F9F68890034607F /* newsfeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsfeedTests.swift; sourceTree = "<group>"; };
@@ -144,6 +146,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42052ECA1FA79F9700DC48F5 /* QuickActions */ = {
+			isa = PBXGroup;
+			children = (
+				42052ECB1FA79FBD00DC48F5 /* TouchActions.swift */,
+			);
+			path = QuickActions;
+			sourceTree = "<group>";
+		};
 		421130CD1F9F68890034607F = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +236,7 @@
 		421130FE1F9F71E00034607F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				42052ECA1FA79F9700DC48F5 /* QuickActions */,
 				8D79D3011FA1740000FD2AD4 /* DefaultsManager */,
 				421131001F9F71F00034607F /* ServiceHelper */,
 				421130FF1F9F71E70034607F /* Extensions */,
@@ -711,6 +722,7 @@
 				8D79D3001FA1597900FD2AD4 /* ImageCache.swift in Sources */,
 				8D79D2FC1FA145C200FD2AD4 /* FeedService.swift in Sources */,
 				8D7DBE6E1FA1A27600618844 /* ArticleItemViewCell.swift in Sources */,
+				42052ECC1FA79FBD00DC48F5 /* TouchActions.swift in Sources */,
 				8D7F26C81FA13D22009C5D3E /* RequestHTTPMethod.swift in Sources */,
 				421131501F9FB28B0034607F /* HomeViewProtocol.swift in Sources */,
 				8D79D3031FA1742300FD2AD4 /* DefaultsManager.swift in Sources */,
